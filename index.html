@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Elements</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      let ulElement = document.createElement("ul");
+      let liElement1 = document.createElement("li");
+      let liElement2 = document.createElement("li");
+      liElement1.innerHTML = "coffee";
+      liElement2.innerHTML = "tea";
+      ulElement.appendChild(liElement1);
+      ulElement.appendChild(liElement2);
+      document.body.appendChild(ulElement);
+      liElement1.addEventListener("click", () => {
+        if (liElement1.style.color != "red") {
+          liElement1.style.color = "red";
+        } else {
+          liElement1.style.color = "black";
+        }
+      });
+      liElement2.addEventListener("click", () => {
+        if (liElement2.style.color != "red") {
+          liElement2.style.color = "red";
+        } else {
+          liElement2.style.color = "black";
+        }
+      });
+    </script>
+  </body>
+</html>
